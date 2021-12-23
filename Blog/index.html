@@ -534,14 +534,12 @@
     <script src="../assets/js/app.js"></script> 
 
 	<script>
-		var online = navigator.onLine;
-
-		if (online == false) {
-
-			alert("Sorry, we currently do not have Internet access.");
-			location.reload();
-
-		}
+		window.addEventListener("online",function(){
+		document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
+});
+		window.addEventListener("offline",function(){
+     	document.body.innerText = "you are offline";
+});
 	</script>
 
 </body>
