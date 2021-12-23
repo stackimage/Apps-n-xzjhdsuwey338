@@ -68,27 +68,14 @@
     <script src="assets/js/app.js"></script> 
 
     <script>
-		function isOnline(no, yes) {
-			var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHttp');
-			xhr.onload = function () {
-				if (yes instanceof Function) {
-					yes();
-				}
-			}
-			xhr.onerror = function () {
-				if (no instanceof Function) {
-					no();
-				}
-			}
-			xhr.open("GET", "index.html", true);
-			xhr.send();
-		}
+		var online = navigator.onLine;
 
-		isOnline(
-			function () {
-				alert("Sorry, we currently do not have Internet access.");
-			},
-		);
+		if (online == false) {
+
+			alert("Sorry, we currently do not have Internet access.");
+			location.reload();
+
+		}
 	</script>
 
 </body>
