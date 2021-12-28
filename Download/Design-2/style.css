@@ -16,7 +16,6 @@ body{
 img{
     width: 100%;
     display: block;
-    pointer-events: none;
 }
 .img-display{
     overflow: hidden;
@@ -47,7 +46,7 @@ img{
     padding: 2rem 1rem;
 }
 .product-title{
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: capitalize;
     font-weight: 700;
     position: relative;
@@ -60,7 +59,7 @@ img{
     left: 0;
     bottom: 0;
     height: 4px;
-    width: 105px;
+    width: 80px;
     background: #12263a;
 }
 .product-link{
@@ -117,7 +116,7 @@ img{
 .product-detail ul li{
     margin: 0;
     list-style: none;
-    background: url(desain/checked.png) left center no-repeat;
+    background: url(shoes_images/checked.png) left center no-repeat;
     background-size: 18px;
     padding-left: 1.7rem;
     margin: 0.4rem 0;
