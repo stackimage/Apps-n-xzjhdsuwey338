@@ -1,118 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Frontend Mentor | Article preview component</title>
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="style.css">
-
-  <!--
-    - google font link
-  -->
-  <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
-
-</head>
-
-<body>
-
-  <!--
-      - article card
-    -->
-
-  <article class="article-card">
-
-    <div class="img-box">
-      <img src="./images/drawers.jpg" alt="" class="article-banner">
-    </div>
-
-
-    <div class="article-content">
-
-      <a href="#">
-        <h3 class="article-title">Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home</h3>
-      </a>
-
-      <p class="article-text">Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I’ve got some simple tips
-        to help you make any room feel complete.</p>
-
-      <div class="acticle-content-footer">
-
-        <div class="author">
-          <img src="./images/avatar-michelle.jpg" alt="" class="author-avater">
-
-          <div class="author-info">
-            <a href="#">
-              <h4 class="author-name">Michelle Appleton</h4>
-            </a>
-            <div class="publish-date">28 Jun 2020</div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  </head>
+  <body>
+    
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              <a href = "#" data-id = "1">
+                <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "2">
+                <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "3">
+                <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "4">
+                <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+              </a>
+            </div>
           </div>
         </div>
-
-
-        <div class="share">
-
-          <button class="share-button">
-            <ion-icon name="arrow-redo"></ion-icon>
-          </button>
-
-          <div class="share-option">
-            <span>Share</span>
-
-            <a href="#">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">nike shoes</h2>
+          <a href = "#" class = "product-link">visit nike store</a>
+          <div class = "product-rating">
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star-half-alt"></i>
+            <span>4.7(21)</span>
           </div>
 
-        </div>
+          <div class = "product-price">
+            <p class = "last-price">Old Price: <span>$257.00</span></p>
+            <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
+          </div>
 
+          <div class = "product-detail">
+            <h2>about this item: </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
+            <ul>
+              <li>Color: <span>Black</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Category: <span>Shoes</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1">
+            <button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+            <button type = "button" class = "btn">Compare</button>
+          </div>
+
+          <div class = "social-links">
+            <p>Share At: </p>
+            <a href = "#">
+              <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-whatsapp"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
       </div>
-
     </div>
 
-  </article>
-
-
-
-
-
-
-  <!--
-    - internal script
-  -->
-  <script>
-
-    const shareOption = document.querySelector('.share-option');
-
-    document.querySelector('.share-button').addEventListener('click', function () {
-      this.classList.toggle('active');
-      shareOption.classList.toggle('active');
-    });
-
-  </script>
-
-  <!--
-    - ionicon link
-  -->
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    
+    <script src="script.js"></script>
+  </body>
 </html>
