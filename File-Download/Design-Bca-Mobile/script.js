@@ -42,3 +42,13 @@ downloadButton.addEventListener("click", () => {
         }
     }, 1000);
 });
+
+function clicked() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Bca-Mobile/awesomeclick");
+    xhr.responseType = "json";
+    xhr.onload = function() {
+        alert(`This button has been clicked ${this.response.value} times!`);
+    }
+    xhr.send();
+}
