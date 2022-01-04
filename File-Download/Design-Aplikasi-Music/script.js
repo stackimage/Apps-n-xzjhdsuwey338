@@ -45,7 +45,7 @@ downloadButton.addEventListener("click", () => {
 
 function clicked() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Musik-Apk/awesomeclick");
+    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Musik-Aplikasi/awesomeclick");
     xhr.responseType = "json";
     xhr.onload = function() {
         alert(`This button has been clicked ${this.response.value} times!`);
