@@ -1,7 +1,7 @@
 const addItem = () => {
     loader.style.display = "block"
     // Storage
-    const ref = storage.ref('resturantItems');
+    const ref = storage.ref('Stack Image');
     let file = document.getElementById('resFoodImage').files[0];
     let date = new Date;
     let name = date.getTime() + '-' + file.name
@@ -11,11 +11,11 @@ const addItem = () => {
 
     task.then(snapshot => snapshot.ref.getDownloadURL())
         .then(url => {
-            let resItemName = document.getElementById('resItemName').value; resPrice = document.getElementById('resPrice').value; resCatrgory = document.getElementById('resCatrgory').value;
+            let ItemName = document.getElementById('ItemName').value; ImageDeskripsi = document.getElementById('ImageDeskripsi').value; resCatrgory = document.getElementById('resCatrgory').value;
             let genID = date.getTime();
             auth.onAuthStateChanged((res) => {
                 db.collection("items").doc(`${genID}`).set({
-                    itemname: resItemName, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
+                    itemname: ItemName, ImageDeskripsi: ImageDeskripsi, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
                 })
                     .then(() => {
                         console.log("Document successfully written!");
@@ -40,7 +40,7 @@ const showItem = () => {
     auth.onAuthStateChanged((res) => {
         db.collection("items").where("key", "==", res.uid).get().then((querySnapshot) => {
             if (querySnapshot.empty) {
-                resItem.innerHTML = `<h2 class="text-center">Tambahkan Produk!</h2>`;
+                resItem.innerHTML = `<h2 class="text-center">Tambahkan Image!</h2>`;
                 loader.style.display = "none";
             }
             else {
@@ -58,7 +58,7 @@ const showItem = () => {
                         <div class="card-body">
                                 <p class="" style="font-size: 25px;"><b>${doc.data().itemname}</b></p>
                             <div class="d-flex justify-content-between">
-                                <p class="" style="font-size: 16px;">Harga: ${doc.data().itemprice}</p>
+                                <p class="" style="font-size: 16px;">Deskripsi : ${doc.data().ImageDeskripsi}</p>
                             </div>
                         </div>
                     </div>

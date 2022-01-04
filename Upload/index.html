@@ -38,43 +38,12 @@
         </div>
     </div>
     <!-- Navbar -->
-    <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-                <h1>Shopzoid</h1>
-            </div>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
 
-        <div class="nav-links">
-            <a onclick="swingWebViewPlugin.doExternalOpen('https://www.google.com'">EN</a>
-            <a onclick="swingWebViewPlugin.doExternalOpen('https://www.google.com')">
-            <i class="bi bi-bar-chart-line"></i>
-            Dashboard</a>
-
-            <div class="dropdown-nav">
-                <span id="shopNameNav"></span>
-                <i class="bi bi-person-circle nav-icon"></i>
-                <div class="dropdown-content-nav">
-                    <!-- <a href="#" onclick="">My orders</a> -->
-                    <a href="#" onclick="logout()">Logout</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
     <div class="nav-bottom">
         <p class="text-center">Dashboard Owner</p>
         <p class="text-white text-center shadow-remove borderradius-remove add-button" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
-            Upload Produk
+            Upload Image
         </p>
     </div>
 
@@ -85,29 +54,26 @@
     </div>
 
 
-
-
-
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content borderradius-remove">
                 <div class="modal-header d-flex justify-content-center">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add Your Produk</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Add Your Image</h5>
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
                 <div class="modal-body">
                     <form id="addingmemberform" class="container">
                         <div class="form-outline">
-                            <label for="resItemName" class="form-label" required>Produk Name</label>
+                            <label for="ItemName" class="form-label" required>Image Name</label>
                             <input type="text" class="form-control shadow-remove borderradius-remove"
-                                placeholder="Produk Name" id="resItemName" aria-describedby="emailHelp" required>
+                                placeholder="Image Name" id="ItemName" aria-describedby="emailHelp" required>
                         </div>
                         <br>
                         <div class="form-outline">
-                            <label for="resPrice" class="form-label" required>Harga Produk</label>
-                            <input type="number" class="form-control shadow-remove borderradius-remove"
-                                placeholder="Harga Produk" id="resPrice" aria-describedby="emailHelp" required>
+                            <label for="ImageDeskripsi" class="form-label" required>Deskripsi Image</label>
+                            <textarea type="text" class="form-control shadow-remove borderradius-remove"
+                            placeholder="Deskripsi Image" id="ImageDeskripsi" aria-describedby="emailHelp" required></textarea>
                         </div>
                         <input type="hidden" id="hiddeninput">
                         <br>
@@ -116,15 +82,14 @@
                             <select id="resCatrgory" class="form-select shadow-remove borderradius-remove"
                                 aria-label="Default select example" required>
                                 <option value="Selected Category" selected>Selected Category</option>
-                                <option value="Chinees">Chinees</option>
-                                <option value="Pakistani">Pakistani</option>
-                                <option value="Jappness">Jappness</option>
+                                <option value="Ui/Ux">Ui/Ux</option>
+                                <option value="Video">Video</option>
                             </select>
                         </div>
                         <br>
                         <div class="form-outline">
                             <label for="resFoodImage" class="form-label" required>Image</label>
-                            <input type="file" accept="image/png, image/jpeg"
+                            <input type="file" name="files[]" accept="image/png, image/jpeg"
                                 class="form-control shadow-remove borderradius-remove" id="resFoodImage"
                                 aria-describedby="emailHelp" required>
                         </div>
