@@ -45,7 +45,7 @@ downloadButton.addEventListener("click", () => {
 
 function clicked() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Grocery-App/awesomeclick");
+    xhr.open("GET", "https://api.countapi.xyz/hit/Design-grocery-app/awesomeclick");
     xhr.responseType = "json";
     xhr.onload = function() {
         alert(`This button has been clicked ${this.response.value} times!`);
