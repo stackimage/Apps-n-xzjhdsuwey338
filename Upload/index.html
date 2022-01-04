@@ -71,13 +71,6 @@
                         </div>
                         <br>
                         <div class="form-outline">
-                            <label for="ImageDeskripsi" class="form-label" required>Deskripsi Image</label>
-                            <textarea type="text" class="form-control shadow-remove borderradius-remove"
-                            placeholder="Deskripsi Image" id="ImageDeskripsi" aria-describedby="emailHelp" required></textarea>
-                        </div>
-                        <input type="hidden" id="hiddeninput">
-                        <br>
-                        <div class="form-outline">
                             <label for="resCatrgory" class="form-label" required>Category</label>
                             <select id="resCatrgory" class="form-select shadow-remove borderradius-remove"
                                 aria-label="Default select example" required>
@@ -88,8 +81,15 @@
                         </div>
                         <br>
                         <div class="form-outline">
+                            <label for="ImageDeskripsi" class="form-label" required>Deskripsi Image</label>
+                            <textarea type="text" class="form-control shadow-remove borderradius-remove"
+                            placeholder="Deskripsi Image" id="ImageDeskripsi" aria-describedby="emailHelp" required></textarea>
+                        </div>
+                        <input type="hidden" id="hiddeninput">
+                        <br>
+                        <div class="form-outline">
                             <label for="resFoodImage" class="form-label" required>Image</label>
-                            <input type="file" name="files[]" accept="image/png, image/jpeg"
+                            <input type="file" name="files[]" accept="image/png, image/jpeg, .rar"
                                 class="form-control shadow-remove borderradius-remove" id="resFoodImage"
                                 aria-describedby="emailHelp" required>
                         </div>
