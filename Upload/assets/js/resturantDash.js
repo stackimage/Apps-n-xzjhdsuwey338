@@ -58,7 +58,7 @@ const showItem = () => {
                         <div class="card-body">
                                 <p class="" style="font-size: 25px;"><b>${doc.data().itemname}</b></p>
                             <div class="d-flex justify-content-between">
-                                <p class="" style="font-size: 16px;">Deskripsi : ${doc.data().ImageDeskripsi}</p>
+                                <p class="" style="font-size: 16px;">Category : ${doc.data().itemcategory} <br /> Deskripsi : ${doc.data().ImageDeskripsi}</p>
                             </div>
                         </div>
                     </div>
