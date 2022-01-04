@@ -8,7 +8,7 @@ var firebaseConfig = {
     storageBucket: "stack-image.appspot.com",
     messagingSenderId: "958868122247",
     appId: "1:958868122247:web:38956a32407616e2faa622",
-    measurementId: "G-QG1DE7N0JD",
+    measurementId: "G-QG1DE7N0JD"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
