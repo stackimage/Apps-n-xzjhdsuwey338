@@ -31,7 +31,7 @@ downloadButton.addEventListener("click", () => {
         if (timeleft <= 0) {
             clearInterval(downloadtimer);
             waitText.style.display = "block";
-            let download_href = "Design Grocery app - Stack Image.rar";
+            let download_href = "Design Daily Task - Stack Image.rar";
             window.location.href = download_href;
             downloadLink.href = download_href;
 
@@ -45,7 +45,7 @@ downloadButton.addEventListener("click", () => {
 
 function clicked() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Grocery-App/awesomeclick");
+    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Daily-task/awesomeclick");
     xhr.responseType = "json";
     xhr.onload = function() {
         alert(`This button has been clicked ${this.response.value} times!`);
