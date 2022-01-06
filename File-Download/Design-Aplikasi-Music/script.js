@@ -1,19 +1,19 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAFNqGjp3qmsAKbt98GmL7C9-UNMXBwVJ8",
-     authDomain: "stack-image-data.firebaseapp.com",
-     databaseURL: "https://stack-image-data-default-rtdb.firebaseio.com",
-     projectId: "stack-image-data",
-     storageBucket: "stack-image-data.appspot.com",
-     messagingSenderId: "903855575857",
-     appId: "1:903855575857:web:ded2db5716e04c5482d610",
-     measurementId: "G-S3C207VCCX"
+  apiKey: "AIzaSyAFNqGjp3qmsAKbt98GmL7C9-UNMXBwVJ8",
+  authDomain: "stack-image-data.firebaseapp.com",
+  databaseURL: "https://stack-image-data-default-rtdb.firebaseio.com",
+  projectId: "stack-image-data",
+  storageBucket: "stack-image-data.appspot.com",
+  messagingSenderId: "903855575857",
+  appId: "1:903855575857:web:ded2db5716e04c5482d610",
+  measurementId: "G-S3C207VCCX"
    };
    firebase.initializeApp(firebaseConfig);
    
    const hitCounter = document.getElementById("hit-counter");
    hitCounter.style.display = "none";
    
-   const db = firebase.database().ref("totalHits");
+   const db = firebase.database().ref("View Design-Aplikasi-Music");
    db.on("value", (snapshot) => {
      hitCounter.textContent = snapshot.val();  
    });
