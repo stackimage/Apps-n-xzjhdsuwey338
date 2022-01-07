@@ -23,9 +23,10 @@
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 	<!-- App CSS -->
-	<link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
-	<link id="theme-style" rel="stylesheet" href="assets/css/lightbox.css">
-	<link id="theme-style" rel="stylesheet" href="assets/css/lightbox-2.css">
+	<link id="theme-style" rel="stylesheet" href="../assets/css/portal.css">
+	<link id="theme-style" rel="stylesheet" href="../assets/css/lightbox.css">
+	<link id="theme-style" rel="stylesheet" href="../assets/css/lightbox-2.css">
+	<link id="theme-style" rel="stylesheet" href="../assets/css/popup.css">
 	<link id="theme-style" rel="stylesheet" href="style.css">
 </head>
 
@@ -39,6 +40,22 @@
 			background-color: red;
 		}
 	</style>
+
+<div class="modal__container" id="modal-container">
+	<div class="modal__content">
+		<div class="modal__close close-modal" title="Close">
+			<i class='bx bx-x'></i>
+		</div>
+		<h1 class="modal__title">Design Bca Mobile</h1>
+		<p class="modal__description">Design By @Andrep13_</p>
+		<a class="btn app-btn-primary"><i class="ri-eye-line"></i> <span id="hit-counter"></span></a>
+		<p style="margin-bottom: 80px;"></p>
+		<button class="modal__button modal__button-width close-modal">
+			Close
+		</button>
+	</div>
+</div>
+
 	<header class="app-header fixed-top">
 		<div class="app-header-inner">
 			<div class="container-fluid py-2">
@@ -408,8 +425,11 @@
 									<!--//col-->
 									<div class="col-auto">
 										<div class="card-header-action">
-											<a class="btn app-btn-primary" href="Komentar/" target="_blank" style="text-decoration: none;"><i class="ri-chat-3-line"></i></a>
 											<a class="btn app-btn-primary" href="Report/" target="_blank">Report</a>
+											<a class="btn app-btn-primary" href="Komentar/" target="_blank"
+												style="text-decoration: none;"><i class="ri-chat-3-line"></i></a>
+											<button class="btn app-btn-primary" id="open-modal"><i
+													class="ri-more-2-fill"></i></button>
 										</div>
 										<!--//card-header-actions-->
 									</div>
@@ -426,22 +446,22 @@
 											<div class="swiper-wrapper">
 												<div class="swiper-slide">
 													<div class="slider-image">
-														<img src="assets/images/Design/Design-1/1.png" alt="Stack Image" style="pointer-events: none;">
+														<img src="../assets/images/Design/Design-Bca-Mobile/1.png" alt="Stack Image" style="pointer-events: none;">
 													</div>
 												</div>
 												<div class="swiper-slide">
 													<div class="slider-image">
-														<img src="assets/images/Design/Design-1/2.png" alt="Stack Image" style="pointer-events: none;">
+														<img src="../assets/images/Design/Design-Bca-Mobile/2.png" alt="Stack Image" style="pointer-events: none;">
 													</div>
 												</div>
 												<div class="swiper-slide">
 													<div class="slider-image">
-														<img src="assets/images/Design/Design-1/3.png" alt="Stack Image" style="pointer-events: none;">
+														<img src="../assets/images/Design/Design-Bca-Mobile/3.png" alt="Stack Image" style="pointer-events: none;">
 													</div>
 												</div>
 												<div class="swiper-slide">
 													<div class="slider-image">
-														<img src="assets/images/Design/Design-1/4.png" alt="Stack Image">
+														<img src="../assets/images/Design/Design-Bca-Mobile/4.png" alt="Stack Image">
 													</div>
 												</div>
 												<!-- Add Pagination -->
@@ -522,19 +542,22 @@
 	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
-	<script src="login-js/app.js"></script>
+	<script src="../login-js/app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+
 
 	<!-- Javascript -->
 	<script
 		type="text/javascript">var message = "Right-click has been disabled"; function clickIE() { if (document.all) { (message); return false; } } function clickNS(e) { if (document.layers || (document.getElementById && !document.all)) { if (e.which == 2 || e.which == 3) { (message); return false; } } } if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS; } else { document.onmouseup = clickNS; document.oncontextmenu = clickIE; } document.oncontextmenu = new Function("return false"); document.getElementsByClassName('my-img').ondragstart = function () { return false; };</script>
-	<script src="assets/plugins/popper.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../assets/plugins/popper.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
 	<!-- Page Specific JS -->
-	<script src="assets/js/lightbox.js"></script>
-	<script src="assets/js/app.js"></script>
+	<script src="../assets/js/lightbox.js"></script>
+	<script src="../assets/js/app.js"></script>
 	<script src="script.js"></script>
+	<script src="../assets/js/main.js"></script>
 
 	<script>
 		window.addEventListener("online", function () {

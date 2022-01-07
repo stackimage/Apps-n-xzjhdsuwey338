@@ -12,7 +12,7 @@ var config = {
 firebase.initializeApp(config);
 
 // Reference messages collection
-var messagesRef = firebase.database().ref('Report Design-Grocery-App');
+var messagesRef = firebase.database().ref('Report Design-Pet-Adoption-App');
 
 function reset() {
   document.getElementById("contactForm").reset();

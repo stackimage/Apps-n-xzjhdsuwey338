@@ -1,3 +1,71 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyAFNqGjp3qmsAKbt98GmL7C9-UNMXBwVJ8",
+    authDomain: "stack-image-data.firebaseapp.com",
+    databaseURL: "https://stack-image-data-default-rtdb.firebaseio.com",
+    projectId: "stack-image-data",
+    storageBucket: "stack-image-data.appspot.com",
+    messagingSenderId: "903855575857",
+    appId: "1:903855575857:web:ded2db5716e04c5482d610",
+    measurementId: "G-S3C207VCCX"
+     };
+     firebase.initializeApp(firebaseConfig);
+     
+     const hitCounter = document.getElementById("hit-counter");
+     hitCounter.style.display = "none";
+     
+     const db = firebase.database().ref("View Design-Pet-Adoption-App");
+     db.on("value", (snapshot) => {
+       hitCounter.textContent = snapshot.val();  
+     });
+     
+     db.transaction(
+       (totalHits) => totalHits + 1,
+       (error) => {
+         if (error) {
+           console.log(error);
+         } else {
+           hitCounter.style.display = "inline-block";
+         }
+       }
+     );
+     
+     const userCookieName = "returningVisitor";
+     checkUserCookie(userCookieName);
+     
+     function checkUserCookie(userCookieName) {
+       const regEx = new RegExp(userCookieName, "g");
+       const cookieExists = document.cookie.match(regEx);
+       if (cookieExists != null) {
+         hitCounter.style.display = "inline-block";
+       } else {
+         createUserCookie(userCookieName);
+         db.transaction(
+           (totalHits) => totalHits + 1,
+           (error) => {
+             if (error) {
+               console.log(error);
+             } else {
+               hitCounter.style.display = "inline-block";
+             }
+           }
+         );
+       }
+     }
+     
+     function createUserCookie(userCookieName) {
+       const userCookieValue = "Yes";
+       const userCookieDays = 7;
+       let expiryDate = new Date();
+       expiryDate.setDate(expiryDate.getDate() + userCookieDays);
+       document.cookie =
+         userCookieName +
+         "=" +
+         userCookieValue +
+         "; expires=" +
+         expiryDate.toGMTString() +
+         "path=/";
+     }
+
 var swiper = new Swiper( '.swiper-container.two', {
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
@@ -31,7 +99,7 @@ downloadButton.addEventListener("click", () => {
         if (timeleft <= 0) {
             clearInterval(downloadtimer);
             waitText.style.display = "block";
-            let download_href = "Design Grocery app - Stack Image.rar";
+            let download_href = "Design Pet Adoption app - Stack Image.rar";
             window.location.href = download_href;
             downloadLink.href = download_href;
 
@@ -45,7 +113,7 @@ downloadButton.addEventListener("click", () => {
 
 function clicked() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/Design-grocery-app/awesomeclick");
+    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Pet-Adoption-App/awesomeclick");
     xhr.responseType = "json";
     xhr.onload = function() {
         alert(`This button has been clicked ${this.response.value} times!`);

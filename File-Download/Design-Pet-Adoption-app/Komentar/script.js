@@ -70,7 +70,7 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
         time: this.formatTime() };
   
   
-      const db = firebase.database().ref("Design Grocery App (Komen)");
+      const db = firebase.database().ref("Design Pet Adoption App (Komen)");
       db.push(user);
   
       this.setState({
@@ -138,7 +138,7 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
       });
     }
     componentDidMount() {
-      const db = firebase.database().ref("Design Grocery App (Komen)");
+      const db = firebase.database().ref("Design Pet Adoption App (Komen)");
   
       db.on("value", snapshot => {
         const comments = snapshot.val();
