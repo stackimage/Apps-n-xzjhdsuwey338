@@ -414,7 +414,7 @@
 									<!--//col-->
 									<div class="col-auto">
 										<div class="card-header-action">
-											<a class="btn app-btn-primary">Share</a>
+											<a onclick="swingWebViewPlugin.doShare('http://www.google.com','google')" >doShare</a>
 											<a class="btn app-btn-primary" href="Report/" target="_blank">Report</a>
 											<a class="btn app-btn-primary" href="Komentar/" target="_blank"
 												style="text-decoration: none;"><i class="ri-chat-3-line"></i></a>
@@ -557,7 +557,6 @@
 	<script src="https://www.swing2app.co.kr/swing_public_src/2020_08_05_001/js/swing_app_on_web.js?test20190102_4"></script>
 
 	<script>
-		swingWebViewPlugin.doShare('https://stackimage.github.io/Apps-n-xzjhdsuwey338/File-Download/Design-Aplikasi-Music/', 'name’);
 		window.addEventListener("online", function () {
 			document.body.innerText = "ONLINE <KELUAR APLIKASI UNTUK MEMULAI ULANG>";
 		});
