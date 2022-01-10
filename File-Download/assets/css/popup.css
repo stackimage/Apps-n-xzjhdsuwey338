@@ -29,6 +29,7 @@
 }
 
 /*=============== BASE ===============*/
+
 button{
   cursor: pointer;
   border: none;
@@ -41,6 +42,7 @@ img{
 }
 
 /*=============== MODAL ===============*/
+
 
 .modal{
   height: 100vh;
@@ -62,7 +64,7 @@ img{
 }
 
 .modal__container{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: hsla(var(--hue), 18%, 75%, .8);
@@ -116,7 +118,7 @@ img{
   cursor: pointer;
 }
 
-.modal__title{
+.title-popup{
   font-size: var(--big-font-size);
   color: var(--title-color);
   font-weight: 500;
@@ -142,7 +144,6 @@ img{
 .show-modal{
   visibility: visible;
   opacity: 1;
-  position: fixed;
 }
 
 .show-modal .modal__content{
