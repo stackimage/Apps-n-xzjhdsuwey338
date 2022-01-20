@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <span class="big-circle"></span>
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Report Design</h3>
+        <p class="text">
+          Visit our Help Center for instructions on reporting Trademark or Copyright infringement.
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="img/email.png" class="icon" alt="" />
+            <p>stackimageid@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form id="contactForm" autocomplete="off">
+          <h3 class="title">Why are you reporting this design?</h3>
+          <div class="alert">Terima Kasih, Kami Segera Periksa Design Ini</div>
+          <select id="kategori" name="kategori" style="
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;" required>
+            <option value="" hidden>Select Option</option>
+            <option value="Download Error">Download Error</option>
+            <option value="File Error">File Error</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <div class="input-container textarea">
+            <textarea name="message" id="message" class="input" maxlength="500"></textarea>
+            <label for="message">Detail</label>
+            <span>Message</span>
+          </div>
+          <input type="button" onclick="reset()" value="Reset" class="btn" />
+          <input type="submit" value="Report" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="app.js"></script>
+  <script src="data.js"></script>
+</body>
+
+</html>
