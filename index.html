@@ -1608,15 +1608,16 @@
 	<div class="cookie-consent-modal">
 		<div class="content">
 			<h1>Alert</h1><hr>
-			<p>The App Is Having Problems Opening The Design Download Page
+			<p>- Application Has Problem Opening Design Download Page <br>- Error On Image Upload Page In Application Stack Image
 
 				<br><br>
 
 				Our Team Will Fix This Problem Soon
 			</p>
 			<div class="btns">
-				<!--Btn--
+				<!--Btn-->
 				<button class="btn cancel">cancel</button>
+				<!--Btn--
 				<button class="btn accept">accept</button>
 				<!--Btn-->
 			</div>
@@ -1655,10 +1656,11 @@
 		let cancelCookieBtn = document.querySelector(".btn.cancel")
 		let acceptCookieBtn = document.querySelector(".btn.accept")
 
-		/* Test *
+		/* Test */
 		cancelCookieBtn.addEventListener("click", function () {
 			cookieModal.classList.remove("active")
 		})
+		/* Test *
 		acceptCookieBtn.addEventListener("click", function () {
 			cookieModal.classList.remove("active")
 			localStorage.setItem("cookieAccepted", "yes")
