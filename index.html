@@ -1683,7 +1683,7 @@
 			<!--Text error-->
 			<div class="btns">
 				<!--Btn-->
-				<button class="btn cancel">cancel</button>
+				<button class="btn cancel">Close</button>
 				 <!--Btn--
 				<button class="btn accept">accept</button>
 				<!--Btn-->
@@ -1719,34 +1719,27 @@
 
 
 
-		const cookieModal = document.querySelector(".cookie-consent-modal")
-		const cancelCookieBtn = document.querySelector(".btn.cancel")
-		const acceptCookieBtn = document.querySelector(".btn.accept")
+		let cookieModal = document.querySelector(".cookie-consent-modal")
+		let cancelCookieBtn = document.querySelector(".btn.cancel")
+		let acceptCookieBtn = document.querySelector(".btn.accept")
 
-
-
-
-		window.addEventListener("load", () => {
-      setTimeout(() => {
-		let cookieAccepted = localStorage.getItem("cookieAccepted")
-        cookieModal.classList.add("active");
-      }, 2000); //Popup the screen in 02 seconds after the page is loaded.
-    });
-
-	cancelCookieBtn.addEventListener("click", function () {
+		/* Test */
+		cancelCookieBtn.addEventListener("click", function () {
 			cookieModal.classList.remove("active")
-      document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
-    })
+		})
+		/* Test *
+		acceptCookieBtn.addEventListener("click", function () {
+			cookieModal.classList.remove("active")
+			localStorage.setItem("cookieAccepted", "yes")
+		})
+		/* Test */
 
-    //Use the created cookie to hide or show the popup screen.
-    const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
-
-    if(WebsiteCookie != -1){
-		cookieModal.style.display = "none"; //Hide the popup screen if the cookie is not expired.
-    }
-    else{
-		cookieModal.style.display = "flex"; //Show the popup screen if the cookie is expired.
-    }
+		setTimeout(function () {
+			let cookieAccepted = localStorage.getItem("cookieAccepted")
+			if (cookieAccepted != "yes") {
+				cookieModal.classList.add("active")
+			}
+		}, 2000)
 	</script>
 
 </body>
