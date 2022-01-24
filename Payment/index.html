@@ -33,7 +33,7 @@
             }
             #cover{
                 position: fixed;
-                background: url(cover.jpg) no-repeat center center fixed; 
+                background: url(86075-loading-upload-image.gif) no-repeat center center fixed; 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -140,15 +140,15 @@
         
         <div id="whole">
             <div id="appbar">
-                <!--img--
+                <!--img-->
                     
-                <img src="logo.png" width="256px;">
+                <img src="payment-method.png" width="150px;">
                 <!--img-->
             </div>
             
             <div class="page order">
                 <div class="block">
-                    <h3 align="center" class="nicefont">Contact Details</h3>
+                    <h3 align="center" class="nicefont">Payment</h3>
                     <p>Order Number</p>
                     <input id="ordernumber" value=123456 readonly>
                     <p>Date</p>
@@ -163,9 +163,10 @@
                     <p>Phone No</p>
                     <input type="number" id="orderphone" placeholder="Masukkan No WhatsApp" required>
                 </div>
+
                 <div class="block">
                     <h3 align="center" class="nicefont">Pembayaran Via</h3>
-                    <input placeholder="Click to choose your Pembayaran Via..." value="Click to choose your cakes..." readonly onclick="showcakechooser()">
+                    <input placeholder="Click to choose your Pembayaran Via..." value="Click to choose your Pembayaran Via..." readonly onclick="pembayaran()" required>
                     
                 </div>
                 
@@ -247,6 +248,18 @@
                 "Dana",
                 "Ovo",                
             ]
+
+            function pembayaran(){
+                $("#cakes").fadeIn()
+            }
+            function hidecakes(){
+                $("#cakes").fadeOut()
+            }
+            
+            var products = [
+                "Dana",
+                "Ovo",                
+            ]
             
             $("#cakebuttons").html(function(){
                 var pb = "";
@@ -290,6 +303,7 @@
                 var orderphone = $("#orderphone").val()
                 var deliverydate = $("#datepicker").val()
                 var deliverytime = $("#deliverytime").val()
+                alert("Setelah Mengirim Data Silahkan Upload Bukti Pembayaran Melalui WA")
                 
                 //check if all input are filled
                 var notcomplete = false

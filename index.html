@@ -74,6 +74,7 @@
 			color: #fff;
 		}
 	</style>
+	
 
 	<header class="app-header fixed-top">
 		<div class="app-header-inner">
@@ -1683,7 +1684,7 @@
 			<!--Text error-->
 			<div class="btns">
 				<!--Btn-->
-				<button class="btn cancel">cancel</button>
+				<button class="btn cancel">Close</button>
 				 <!--Btn--
 				<button class="btn accept">accept</button>
 				<!--Btn-->
@@ -1725,7 +1726,8 @@
 
 		/* Test */
 		cancelCookieBtn.addEventListener("click", function () {
-			cookieModal.classList.remove("active")
+			popupScreen.classList.remove("active"); 
+      document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
 		})
 		/* Test *
 		acceptCookieBtn.addEventListener("click", function () {
@@ -1740,6 +1742,10 @@
 				cookieModal.classList.add("active")
 			}
 		}, 2000)
+
+
+
+		
 	</script>
 
 </body>
