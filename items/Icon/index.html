@@ -19,15 +19,14 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- FontAwesome JS-->
-	<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
+	<script defer src="/../assets/plugins/fontawesome/js/all.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 	<!-- App CSS -->
-	<link id="theme-style" rel="stylesheet" href="../assets/css/portal.css">
-	<link id="theme-style" rel="stylesheet" href="../assets/css/lightbox.css">
-	<link id="theme-style" rel="stylesheet" href="../assets/css/lightbox-2.css">
-	<link id="theme-style" rel="stylesheet" href="../assets/css/popup.css">
-	<link id="theme-style" rel="stylesheet" href="style.css">
+	<link id="theme-style" rel="stylesheet" href="/../assets/css/portal.css">
+	<link id="theme-style" rel="stylesheet" href="/../assets/css/lightbox.css">
+	<link id="theme-style" rel="stylesheet" href="/../assets/css/lightbox-2.css">
+
 </head>
 
 <body class="app">
@@ -39,23 +38,42 @@
 		.offline {
 			background-color: red;
 		}
-	</style>
 
-<div class="modal__container" id="modal-container">
-	<div class="modal__content">
-		<div class="modal__close close-modal" title="Close">
-			<i class='bx bx-x'></i>
-		</div>
-		<h1 class="modal__title">Design Quari Wallet</h1>
-		<p class="modal__description">Design By @uimrhraju</p>
-		<a class="btn app-btn-primary"><i class="ri-eye-line"></i> <span id="hit-counter"></span></a>
-		<a class="btn app-btn-primary" href="Report/" target="_blank">Report</a>
-		<p style="margin-bottom: 80px;"></p>
-		<button class="modal__button modal__button-width close-modal">
-			Close
-		</button>
-	</div>
-</div>
+
+		.cookie-consent-modal {
+			height: 100vh;
+			width: 100vw;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			display: none;
+			align-items: flex-end;
+			transition: 400ms;
+		}
+
+		.cookie-consent-modal.active {
+			display: flex;
+		}
+
+		.content {
+			background-color: #fff;
+			padding: 5vw 3vw;
+			border-radius: 10px 10px 0 0;
+		}
+
+		.btns {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 2em;
+		}
+
+		.btn.accept {
+			background-color: rgb(0, 185, 124);
+			color: #fff;
+		}
+	</style>
 
 	<header class="app-header fixed-top">
 		<div class="app-header-inner">
@@ -79,7 +97,6 @@
 		            <div class="app-utilities col-auto">
 			            <div class="app-utility-item app-notifications-dropdown dropdown">    
 				            <a class="dropdown-toggle no-toggle-arrow" id="notifications-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" title="Notifications">
-					            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ --
 					            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bell icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z"/>
   <path fill-rule="evenodd" d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
@@ -208,11 +225,11 @@
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link" href="Komentar/" target="_blank">
+							<a class="nav-link active">
 								<span class="nav-icon">
-									<i class="ri-chat-3-line" style="font-size: 21px;"></i>
+									<i class="ri-home-3-line" style="font-size: 21px;"></i>
 								</span>
-								<span class="nav-link-text">Komen</span>
+								<span class="nav-link-text">Home</span>
 							</a>
 							<!--//nav-link-->
 						</li>
@@ -220,40 +237,86 @@
 
 						<!--Belum Pakai-->
 						<li class="nav-item">
-							<a class="nav-link" href="Report/" target="_blank">
+							<a class="nav-link" href="Blog/">
 								<span class="nav-icon">
-									<i class="ri-information-line" style="font-size: 21px;"></i>
+									<i class="ri-article-line" style="font-size: 21px;"></i>
 								</span>
-								<span class="nav-link-text">Report</span>
+								<span class="nav-link-text">Blog</span>
 							</a>
 						</li>
 						<!--//nav-item--
 
-					    <li class="nav-item has-submenu">
-					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ --
-					        <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
-						        <span class="nav-icon">
-						        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ --
-						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-	  <path fill-rule="evenodd" d="M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/>
-	  <path d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z"/>
-	</svg>
-						         </span>
-		                         <span class="nav-link-text">Pages</span>
-		                         <span class="submenu-arrow">
-		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-	</svg>
-	                             </span><!--//submenu-arrow--
-					        </a><!--//nav-link--
-					        <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
-						        <ul class="submenu-list list-unstyled">
-							        <li class="submenu-item"><a class="submenu-link" href="notifications.html">Notifications</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="account.html">Account</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="settings.html">Settings</a></li>
-						        </ul>
-					        </div>
-					    </li><!--//nav-item--
+						<!--Belum Pakai-->
+						<li class="nav-item">
+							<a class="nav-link" href="kategori.html">
+								<span class="nav-icon">
+									<i class="ri-file-list-3-line" style="font-size: 21px;"></i>
+								</span>
+								<span class="nav-link-text">Category</span>
+							</a>
+						</li>
+						<!--//nav-item-->
+
+						<li class="nav-item has-submenu">
+							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
+								data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+								<span class="nav-icon">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z" />
+										<path
+											d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z" />
+									</svg>
+								</span>
+								<span class="nav-link-text">Design</span>
+								<span class="submenu-arrow">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+									</svg>
+								</span>
+								<!--//submenu-arrow-->
+							</a>
+							<!--//nav-link-->
+							<div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+								<ul class="submenu-list list-unstyled">
+									<li class="submenu-item"><a class="submenu-link" href="Pages/Mobile.html">Mobile</a>
+									</li>
+									<li class="submenu-item"><a class="submenu-link" href="Pages/Web-Design.html">Web
+											Design</a></li>
+								</ul>
+							</div>
+						</li>
+<!--//nav-link--
+						<li class="nav-item has-submenu">
+							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
+								data-bs-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
+								<span class="nav-icon">
+									<i class="ri-video-line" style="font-size: 21px;"></i>
+								</span>
+								<span class="nav-link-text">Video</span>
+								<span class="submenu-arrow">
+									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
+										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+									</svg>
+								</span>
+								<!--//submenu-arrow--
+							</a>
+							<!--//nav-link--
+							<div id="submenu-2" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+								<ul class="submenu-list list-unstyled">
+									<li class="submenu-item"><a class="submenu-link" href="Pages/Mobile.html">Mobile</a>
+									</li>
+									<li class="submenu-item"><a class="submenu-link" href="Pages/Web-Design.html">Web
+											Design</a></li>
+								</ul>
+							</div>
+						</li>
+						<!--//nav-item--
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ --
 					        <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
@@ -362,39 +425,25 @@
 			<div class="container-xl">
 				<div class="row g-3 mb-4 align-items-center justify-content-between">
 					<div class="col-auto">
-						<h1 class="app-page-title mb-0">Design Download</h1>
+						<h1 class="app-page-title mb-0">Icon</h1>
 					</div>
 					<div class="col-auto">
 						<div class="page-utilities">
 							<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
 								<div class="col-auto">
-									<!--Nggak Pakai--
-								    <form class="docs-search-form row gx-1 align-items-center">
-					                    <div class="col-auto">
-					                        <input type="text" id="search-docs" name="searchdocs" class="form-control search-docs" placeholder="Search">
-					                    </div>
-					                    <div class="col-auto">
-					                        <button type="submit" class="btn app-btn-secondary">Search</button>
-					                    </div>
-					                </form>
-									<!--Nggak Pakai-->
-
 								</div>
 								<!--//col-->
-								<!--Nggak Pakai--
-							    <div class="col-auto">
-								    
-								    <select class="form-select w-auto">
-										  <option selected="" value="option-1">All</option>
-										  <option value="option-2">Text file</option>
-										  <option value="option-3">Image</option>
-										  <option value="option-4">Spreadsheet</option>
-										  <option value="option-5">Presentation</option>
-										  <option value="option-6">Zip file</option>
-										  
-									</select>
-							    </div>
 								<!--Nggak Pakai-->
+								<div class="col-auto">
+									<a class="btn app-btn-primary" href="Upload/"><svg width="1em" height="1em"
+											viewBox="0 0 16 16" class="bi bi-upload me-2" fill="currentColor"
+											xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd"
+												d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+											<path fill-rule="evenodd"
+												d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+										</svg>Upload File</a>
+								</div>
 							</div>
 							<!--//row-->
 						</div>
@@ -404,94 +453,92 @@
 				</div>
 				<!--//row-->
 
-				<div class="row g-4">
-					<div class="col-12 col-lg-6">
-						<div class="app-card app-card-progress-list h-100 shadow-sm">
-							<div class="app-card-header p-3">
-								<div class="row justify-content-between align-items-center">
-									<div class="col-auto">
-										<h4 class="app-card-title">22 Jan 2022</h4>
-									</div>
-									<!--//col-->
-									<div class="col-auto">
-										<div class="card-header-action">
-											<a class="btn app-btn-primary" href="Komentar/" target="_blank" style="text-decoration: none;"><i class="ri-chat-3-line"></i></a>
-											<a class="btn app-btn-primary" onclick="swingWebViewPlugin.doShare('Download Design Quari Wallet | Stack Image Link : https://www.stackimage.my.id/File/Download-Design/Design-Quari-Wallet/','Stack Image')" style="text-decoration: none;"><i class="ri-share-fill"></i></a>
-											<button class="btn app-btn-primary" id="open-modal"><i
-													class="ri-more-2-fill"></i></button>
-										</div>
-										<!--//card-header-actions-->
-									</div>
-									<!--//col-->
+				<!--//Alert--
+				<div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
+					<div class="inner">
+						<div class="app-card-body p-3 p-lg-4">
+							<h3 class="mb-3">Info</h3>
+							<div class="row gx-5 gy-3">
+								<div class="col-12 col-lg-9">
+
+									<div>Klik Sebelah Kanan / Kiri Pada Gambar Untuk Menggeser Gambar Berikutnya /
+										Sebelumnya.</div>
 								</div>
-								<!--//row-->
 							</div>
-							<!--//app-card-header-->
-							<div class="app-card-body">
-								<div class="item p-3">
-									<div class="row align-items-center">
-										<!-- Swiper -->
-										<div class="swiper-container two">
-											<div class="swiper-wrapper">
-												<div class="swiper-slide">
-													<div class="slider-image">
-														<img src="../assets/images/Design/Design-Quari-Wallet/1.jpg" alt="Stack Image" style="pointer-events: none;">
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slider-image">
-														<img src="../assets/images/Design/Design-Quari-Wallet/2.jpg" alt="Stack Image" style="pointer-events: none;">
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slider-image">
-														<img src="../assets/images/Design/Design-Quari-Wallet/3.jpg" alt="Stack Image" style="pointer-events: none;">
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="slider-image">
-														<img src="../assets/images/Design/Design-Quari-Wallet/4.jpg" alt="Stack Image" style="pointer-events: none;">
-													</div>
-												</div>
-												<!-- Add Pagination -->
-											</div>
-											<div class="swiper-pagination"></div>
-										</div>
-										<!-- partial -->
-										<h4 class="app-card-title" style="margin-top: 20px;">Design Quari Wallet</h4>
-										<span>Design By @uimrhraju
-											<br><br>
-											Use #stackimageid in your design content and the stack image will be uploaded to the app.
-										</span>
-										<br><br><br><br><br><br><br>
-										<div class="container">
-											<a class="down-btn" onclick="clicked()">Download Files <i class="fas fa-download"></i></a>
-											<div class="countdown">
-
-											</div>
-											<div class="waiting-text">
-												Please Wait..
-											</div>
-											<div class="download-text" style="text-align: center;">
-												If the download did't start automatically, <a
-													href="Design Quari Wallet - Stack Image.rar"
-													class="download-link"  style="text-align: center;">
-													Click Here
-												</a>
-											</div>
-										</div>
-									</div>
-									<!--//row-->
-
-								</div>
-								<!--//item-->
-
-							</div>
-							<!--//app-card-body-->
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>
-						<!--//app-card-->
 					</div>
-					<!--//col-->
+				</div>
+				<!--//app-card-->
+
+				<div class="row g-4">
+
+					<!--Design-Wallet-App-Ui--
+					<div class="col-6 col-md-4 col-xl-3 col-xxl-2">
+						<div class="app-card app-card-doc shadow-sm  h-100">
+							<div class="app-card-thumb-holder p-3">
+								<div class="app-card-thumb">
+									<img class="thumb-image" src="assets/images/Design/Design-Wallet-App-Ui/1.jpg"
+										alt="Stack Image">
+									<span class="badge bg-success">NEW</span>
+								</div>
+								<a class="app-card-link-mask"
+									href="File-Download/Download-Design/Design-Wallet-App-Ui/"></a>
+							</div>
+							<div class="app-card-body p-3 has-card-actions">
+
+								<h4 class="app-doc-title truncate mb-0">Wallet App Ui</h4>
+								<div class="app-doc-meta">
+									<ul class="list-unstyled mb-0">
+										<li><span class="text-muted">Type :</span> Image</li>
+										<li><span class="text-muted">Size :</span> 335 KB</li>
+										<li><span class="text-muted">Upload :</span> 25 Jan 2022</li>
+									</ul>
+								</div>
+								<!--//app-doc-meta--
+
+								<div class="app-card-actions">
+									<div class="dropdown">
+										<div class="dropdown-toggle no-toggle-arrow" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											<svg width="1em" height="1em" viewBox="0 0 16 16"
+												class="bi bi-three-dots-vertical" fill="currentColor"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd"
+													d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+											</svg>
+										</div>
+										<!--//dropdown-toggle--
+										<ul class="dropdown-menu">
+											<li>
+												<a class="dropdown-item"
+													href="File-Download/Download-Design/Design-Wallet-App-Ui/Komentar/"
+													target="_blank">
+													<i class="ri-chat-3-line"></i> Komentar</a>
+												<a class="dropdown-item"
+													href="File-Download/Download-Design/Design-Wallet-App-Ui/">
+													<i class="ri-download-line"></i> Download</a>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<a class="dropdown-item"
+												href="File-Download/Download-Design/Design-Wallet-App-Ui/Report/"
+												target="_blank">
+												Report</a>
+											</li>
+										</ul>
+									</div>
+									<!--//dropdown--
+								</div>
+								<!--//app-card-actions--
+
+							</div>
+							<!--//app-card-body--
+
+						</div>
+						<!--//app-card--
+					</div>
+					<!--Design-Wallet-App-Ui-->
 
 				</div>
 				<!--//row--
@@ -525,29 +572,45 @@
 	</div>
 	<!--//app-wrapper-->
 
+	<div class="cookie-consent-modal">
+		<div class="content">
+			<h1>Alert</h1><hr>
+			<p>Our team has fixed all the bugs in the application and can be used properly</p>
+			<!--Text error--
+			<p>- Application Has Problem Opening Design Download Page <br>- Error On Image Upload Page In Application Stack Image
+
+				<br><br>
+
+				Our Team Will Fix This Problem Soon
+			</p>
+			<!--Text error-->
+			<div class="btns">
+				<!--Btn-->
+				<button class="btn cancel">Close</button>
+				 <!--Btn--
+				<button class="btn accept">accept</button>
+				<!--Btn-->
+			</div>
+		</div>
+	</div>
+
+
 	<!--Firebase-->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js'></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
-	<script src="../login-js/app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
-
+	<script src="/../login-js/app.js"></script>
 
 	<!-- Javascript -->
 	<script
 		type="text/javascript">var message = "Right-click has been disabled"; function clickIE() { if (document.all) { (message); return false; } } function clickNS(e) { if (document.layers || (document.getElementById && !document.all)) { if (e.which == 2 || e.which == 3) { (message); return false; } } } if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS; } else { document.onmouseup = clickNS; document.oncontextmenu = clickIE; } document.oncontextmenu = new Function("return false"); document.getElementsByClassName('my-img').ondragstart = function () { return false; };</script>
-	<script src="../assets/plugins/popper.min.js"></script>
-	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/../assets/plugins/popper.min.js"></script>
+	<script src="/../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
 	<!-- Page Specific JS -->
-	<script src="../assets/js/lightbox.js"></script>
-	<script src="../assets/js/app.js"></script>
-	<script src="script.js"></script>
-	<script src="../assets/js/main.js"></script>
-	<script src="https://www.swing2app.co.kr/swing_public_src/2020_08_05_001/js/swing_app_on_web.js?test20190102_4"></script>
+	<script src="/../assets/js/lightbox.js"></script>
+	<script src="/../assets/js/app.js"></script>
 
 	<script>
 		window.addEventListener("online", function () {
@@ -556,6 +619,30 @@
 		window.addEventListener("offline", function () {
 			document.body.innerText = "you are offline";
 		});
+
+
+
+		let cookieModal = document.querySelector(".cookie-consent-modal")
+		let cancelCookieBtn = document.querySelector(".btn.cancel")
+		let acceptCookieBtn = document.querySelector(".btn.accept")
+
+		/* Test */
+		cancelCookieBtn.addEventListener("click", function () {
+			cookieModal.classList.remove("active")
+		})
+		/* Test *
+		acceptCookieBtn.addEventListener("click", function () {
+			cookieModal.classList.remove("active")
+			localStorage.setItem("cookieAccepted", "yes")
+		})
+		/* Test */
+
+		setTimeout(function () {
+			let cookieAccepted = localStorage.getItem("cookieAccepted")
+			if (cookieAccepted != "yes") {
+				cookieModal.classList.add("active")
+			}
+		}, 2000)
 	</script>
 
 </body>
