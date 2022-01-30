@@ -225,7 +225,7 @@
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link">
+							<a href="/index.html" class="nav-link">
 								<span class="nav-icon">
 									<i class="ri-home-3-line" style="font-size: 21px;"></i>
 								</span>
@@ -237,7 +237,7 @@
 
 						<!--Belum Pakai-->
 						<li class="nav-item">
-							<a class="nav-link" href="Blog/">
+							<a class="nav-link" href="/Blog/">
 								<span class="nav-icon">
 									<i class="ri-article-line" style="font-size: 21px;"></i>
 								</span>
@@ -248,7 +248,7 @@
 
 						<!--Belum Pakai-->
 						<li class="nav-item">
-							<a class="nav-link" href="kategori.html">
+							<a class="nav-link" href="/kategori.html">
 								<span class="nav-icon">
 									<i class="ri-file-list-3-line" style="font-size: 21px;"></i>
 								</span>
@@ -257,38 +257,31 @@
 						</li>
 						<!--//nav-item-->
 
-						<li class="nav-item has-submenu">
-							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
-								data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
-								<span class="nav-icon">
-									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files"
-										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd"
-											d="M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z" />
-										<path
-											d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z" />
-									</svg>
-								</span>
-								<span class="nav-link-text active">Design</span>
-								<span class="submenu-arrow">
-									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down"
-										fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd"
-											d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-									</svg>
-								</span>
-								<!--//submenu-arrow-->
-							</a>
 							<!--//nav-link-->
-							<div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
-								<ul class="submenu-list list-unstyled">
-									<li class="submenu-item active"><a class="submenu-link" href="Pages/Mobile.html">Mobile</a>
-									</li>
-									<li class="submenu-item"><a class="submenu-link" href="Pages/Web-Design.html">Web
-											Design</a></li>
-								</ul>
-							</div>
-						</li>
+						<li class="nav-item has-submenu">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true" aria-controls="submenu-1">
+						        <span class="nav-icon">
+						        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/>
+	  <path d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z"/>
+	</svg>
+						         </span>
+		                         <span class="nav-link-text">Design</span>
+		                         <span class="submenu-arrow">
+		                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+	</svg>
+	                             </span><!--//submenu-arrow-->
+					        </a><!--//nav-link-->
+					        <div id="submenu-1" class="collapse submenu submenu-1 show" data-bs-parent="#menu-accordion">
+						        <ul class="submenu-list list-unstyled">
+							        <li class="submenu-item"><a class="submenu-link active">Icon</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/items/Logo/">Logo</a></li>
+						        </ul>
+					        </div>
+					    </li><!--//nav-item-->
 <!--//nav-link--
 						<li class="nav-item has-submenu">
 							<a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse"
@@ -400,7 +393,7 @@
 						    </li><!--//nav-item-->
 							<li class="nav-item">
 
-								<a class="nav-link" href="help.html">
+								<a class="nav-link" href="/help.html">
 									<span class="nav-icon">
 										<i class="ri-question-line" style="font-size: 21px;"></i>
 									</span>
