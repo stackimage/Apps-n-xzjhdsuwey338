@@ -1,12 +1,12 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAFNqGjp3qmsAKbt98GmL7C9-UNMXBwVJ8",
-    authDomain: "stack-image-data.firebaseapp.com",
-    databaseURL: "https://stack-image-data-default-rtdb.firebaseio.com",
-    projectId: "stack-image-data",
-    storageBucket: "stack-image-data.appspot.com",
-    messagingSenderId: "903855575857",
-    appId: "1:903855575857:web:ded2db5716e04c5482d610",
-    measurementId: "G-S3C207VCCX"
+  apiKey: "AIzaSyB3l5FyimzjqiOmVAPw19LAx5_KfSYBSn0",
+  authDomain: "stack-image-view-icon.firebaseapp.com",
+  databaseURL: "https://stack-image-view-icon-default-rtdb.firebaseio.com",
+  projectId: "stack-image-view-icon",
+  storageBucket: "stack-image-view-icon.appspot.com",
+  messagingSenderId: "778495915058",
+  appId: "1:778495915058:web:94648703f91be867a9b82b",
+  measurementId: "G-7WTW9YGFZR"
      };
      firebase.initializeApp(firebaseConfig);
      
