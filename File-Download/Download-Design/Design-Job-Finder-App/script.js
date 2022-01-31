@@ -13,7 +13,7 @@ const firebaseConfig = {
      const hitCounter = document.getElementById("hit-counter");
      hitCounter.style.display = "none";
      
-     const db = firebase.database().ref("View Design-Yoga-App");
+     const db = firebase.database().ref("View Design-Job-Finder-App");
      db.on("value", (snapshot) => {
        hitCounter.textContent = snapshot.val();  
      });
@@ -99,7 +99,7 @@ downloadButton.addEventListener("click", () => {
         if (timeleft <= 0) {
             clearInterval(downloadtimer);
             waitText.style.display = "block";
-            let download_href = "Design Yoga App - Stack Image.rar";
+            let download_href = "Design Job Finder App - Stack Image.rar";
             window.location.href = download_href;
             downloadLink.href = download_href;
 
@@ -113,7 +113,7 @@ downloadButton.addEventListener("click", () => {
 
 function clicked() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Yoga-App/awesomeclick");
+    xhr.open("GET", "https://api.countapi.xyz/hit/Design-Job-Finder-App/awesomeclick");
     xhr.responseType = "json";
     xhr.onload = function() {
         alert(`This button has been clicked ${this.response.value} times!`);
